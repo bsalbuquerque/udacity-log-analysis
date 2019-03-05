@@ -27,7 +27,7 @@ Como este repositório contem apenas códigos-fonte, algumas ferramentas serão 
 Acesse [esta página](https://classroom.udacity.com/nanodegrees/nd051-br/parts/2c4de681-99d9-4e03-99f4-e15239804369/modules/6ca5a200-77ac-4aba-8936-4bae9f6a6d00/lessons/5475ecd6-cfdb-4418-85a2-f2583074c08d/concepts/14c72fe3-e3fe-4959-9c4b-467cf5b7c3a0) caso ainda não tenha configurado uma VM e siga o passo-a-passo das instruções fornecidas. Cumprido este pré-requisito, você deverá:
 
 * Caso esteja utilizando o Python3, instalar o pacote DB-API do PostgreSQL executando o comando `sudo pip3 install psycopg2` no terminal
-* Como sugestão opicional, instalar o framework `Flask`para visualizar o relatório na aplicação web, executando o comando `sudo pip3 install flask` no terminal
+* Como sugestão opcional, instalar o framework `Flask`para visualizar o relatório na aplicação web, executando o comando `sudo pip3 install flask` no terminal
 * Baixar o banco de dados de onde foi extraída a análise dos dados - [acesse aqui](https://drive.google.com/uc?export=download&id=1lTXhG5Wnfc72r24FOcI3xYQxh4ztDwo_)
 * Mover o arquivo baixado para o diretório `/vagrant` da máquina virtual
 * Com o terminal aberto, executar o comando `psql -d news -f newsdata.sql` e aguardar a configuração das tabelas do banco de dados `news`
