@@ -32,7 +32,7 @@ def get_authors():
     db.close()
     text = "Who is the most popular authors of the time?\n"
     for row in authors:
-        text += "{0} -- {1} visualizações\n".format(row[0], row[1])
+        text += "{0} -- {1} views\n".format(row[0], row[1])
     text += "\n\n"
     return text
 
