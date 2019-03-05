@@ -8,6 +8,7 @@ import psycopg2
 
 dbname = "dbname=news"
 
+
 # Function to get top 3 articles
 def get_articles():
     db = psycopg2.connect(dbname)
@@ -48,6 +49,7 @@ def get_errors():
         text += "{0} -- {1} %\n".format(row[0], round(float(row[1]), 2))
     text += "\n\n"
     return text
+
 
 # Function to write the Log Analysis Report
 def main():
