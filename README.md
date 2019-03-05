@@ -70,7 +70,7 @@ CREATE VIEW top_authors AS
           GROUP BY name ORDER BY views DESC;
 ```
 
-3. morethan_one -> `SELECT * FROM morethan_one`
+3. morethan_one -> `SELECT * FROM morethan_one;`
 
 ```sql
 CREATE VIEW morethan_one AS
