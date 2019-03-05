@@ -6,7 +6,7 @@
 
 # Modules
 from flask import Flask, request
-from reportdb import get_articles, get_authors, get_errors
+from reportdb_html import get_articles, get_authors, get_errors
 
 # Flask Application
 app = Flask(__name__)
