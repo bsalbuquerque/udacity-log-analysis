@@ -4,6 +4,7 @@ import psycopg2
 
 dbname = "dbname=news"
 
+
 # Function to get top 3 articles
 def get_articles():
     db = psycopg2.connect(dbname)
@@ -12,7 +13,8 @@ def get_articles():
     return cursor.fetchall()
     db.close()
 
-# Get top 5 authors
+
+# Function to get top authors
 def get_authors():
     db = psycopg2.connect(dbname)
     cursor = db.cursor()
@@ -20,7 +22,8 @@ def get_authors():
     return cursor.fetchall()
     db.close()
 
-# Get top 5 days with more than 1% error processing
+
+# Function to get days with more than 1% error processing
 def get_errors():
     db = psycopg2.connect(dbname)
     cursor = db.cursor()
