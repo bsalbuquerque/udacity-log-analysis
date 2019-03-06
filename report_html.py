@@ -88,6 +88,7 @@ QUESTION3 = '''<tr>
               <td>{1}</td>
             </tr>'''
 
+
 # Getting main page
 @app.route('/', methods=['GET'])
 def main():
