@@ -88,12 +88,13 @@ CREATE VIEW top_authors AS
 ```sql
 CREATE VIEW morethan_one AS
   SELECT * FROM
-      (SELECT errors.date AS date, errors.num::decimal / oks.num * 100
+      (SELECT errors.date AS date,
+        errors.num::decimal / (oks.num + errors.num) * 100
         AS percent FROM
-            (SELECT TO_CHAR(time, 'Mon DD,YYYY') AS date, count(status) AS num
+            (SELECT to_char(time, 'Mon DD, YYYY') AS date, count(status) AS num
             FROM log WHERE status != '200 OK'
                 GROUP BY date ORDER BY num desc) AS errors,
-            (SELECT TO_CHAR(time, 'Mon DD,YYYY') AS date, count(status) AS num
+            (SELECT to_char(time, 'Mon DD, YYYY') AS date, count(status) AS num
             FROM log WHERE status = '200 OK'
                 GROUP BY date ORDER BY num desc) AS oks
           WHERE errors.date = oks.date ORDER BY percent DESC) AS requests
